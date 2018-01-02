@@ -1,0 +1,19 @@
+.social__icon {
+  padding: 5px;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
+
+.social__icon > svg {
+  padding: 5px;
+}
+
+.social__icon > svg > path {
+  fill: $medium-grey;
+}
+
+.social__icon > svg > polygon {
+  fill: $medium-grey;
+}

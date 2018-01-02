@@ -1,0 +1,31 @@
+body {
+  font-family: $base-font-family;
+}
+
+
+/* Header CSS */
+
+
+/* Footer CSS */
+
+.footer {
+  padding: 10px 0;
+  background-color: $grey;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.footer__wrapper--header {
+  margin-top: 16px;
+}
+
+.social__list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
