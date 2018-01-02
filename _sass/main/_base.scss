@@ -1,3 +1,20 @@
+body {
+  font-family: $base-font-family;
+  padding-top: 64px;
+  height: calc(100% - 64px);
+}
+
+p {
+  margin: 0;
+}
+
+.divider {
+  width: 100vw;
+  height: 32px;
+  background-image: -webkit-linear-gradient(150deg, rgb(0, 89, 149) 50%, rgb(141, 198, 255) 50%);
+  background-image: linear-gradient(150deg, rgb(0, 89, 149) 50%, rgb(141, 198, 255) 50%);
+}
+
 .social__icon {
   padding: 5px;
 

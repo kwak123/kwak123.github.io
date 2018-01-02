@@ -14,12 +14,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Samuel Kwak
+author: Samuel Kwak
 email: kwak123@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Samuel, full-stack developer with a background in hard sciences and health. 
-  His objective, observe, question, form hypothesis, experiment, analyze, repeat. And write clean code. 
+description: >
+  I'm a driven individual with a background in hard sciences and healthcare.
+  My objective? Observe, question, form hypothesis, experiment, analyze, repeat. And write clean code. 
 short_description: Fullstack developer, loves mobile and healthcare.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blogc
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: kwakles124
 github_username:  kwak123
