@@ -2,20 +2,23 @@
 layout: default
 ---
 
-<div class="home">
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
+{% include profile.html %}
 
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
+    <div class="home">
+      {% include projects.html %}
+    </div>
+  </div>
+</main>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+<!-- {% for post in site.posts %}
+<div>
+  {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+  <span class="post-meta">{{ post.date | date: date_format }}</span>
 
+  <h2>
+    <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+  </h2>
 </div>
+{% endfor %} -->

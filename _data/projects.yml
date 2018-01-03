@@ -1,0 +1,12 @@
+- name: Loco
+  description: Crowd-sourcing subway status
+  image: assets/images/personal.jpg
+  tech: React Native, Express, Mongo, Redis, DigitalOcean
+- name: Loco-API
+  description: Open-sourced and GTFS-compliant API for transit feeds
+  image: assets/images/personal.jpg
+  tech: Express, MySql, AWS (EC2/RDS)
+- name: Kwak-React
+  description: A personal React boilerplate with minimal blackboxing
+  image: assets/images/personal.jpg
+  tech: React, Express, Babel/Webpack, Mocha/Chai, and Jest
