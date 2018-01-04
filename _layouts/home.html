@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+{% include profile.html %}
+
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
+    <div class="home">
+      {% include projects.html %}
+    </div>
+  </div>
+</main>
+
+<!-- {% for post in site.posts %}
+<div>
+  {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+  <span class="post-meta">{{ post.date | date: date_format }}</span>
+
+  <h2>
+    <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+  </h2>
+</div>
+{% endfor %} -->

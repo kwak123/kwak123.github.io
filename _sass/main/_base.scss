@@ -1,0 +1,52 @@
+body {
+  font-family: $base-font-family;
+  padding-top: 64px;
+  height: calc(100% - 64px);
+}
+
+p, h3 {
+  margin: 0;
+}
+
+.divider {
+  width: 100vw;
+  height: 32px;
+  background-image: -webkit-linear-gradient(150deg, rgb(0, 89, 149) 50%, rgb(141, 198, 255) 50%);
+  background-image: linear-gradient(150deg, rgb(0, 89, 149) 50%, rgb(141, 198, 255) 50%);
+}
+
+.social__icon {
+  padding: 5px;
+
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
+
+.social__icon > svg {
+  padding: 5px;
+}
+
+.social__icon > svg > path {
+  fill: $medium-grey;
+}
+
+.social__icon > svg > polygon {
+  fill: $medium-grey;
+}
+
+.wrapper {
+  // max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  // max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  // @extend %clearfix;
+
+  // @include media-query($on-laptop) {
+  //   max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+  //   max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+  //   padding-right: $spacing-unit / 2;
+  //   padding-left: $spacing-unit / 2;
+  // }
+}
