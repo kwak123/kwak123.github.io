@@ -7,9 +7,11 @@
 
     {% include header.html %}
 
-    {{ content }}
+    <div class="fade__content hide">
+      {{ content }}
 
-    {% include footer.html social=site.data.social %}
+      {% include footer.html social=site.data.social %}
+    </div>
 
   </body>
 
