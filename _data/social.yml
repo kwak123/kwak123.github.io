@@ -1,6 +1,6 @@
 - class: email
   username: kwak123
-  url: mailto://kwak123@gmail.com
+  url: mailto:kwak123@gmail.com
 - class: github
   username: kwak123
   url: https://github.com/kwak123
