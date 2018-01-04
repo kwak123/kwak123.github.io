@@ -110,8 +110,8 @@
 .project__container {
   width: calc(100% - 64px);
   display: grid;
-  grid-template-columns: 360px 1fr;
-  grid-column-gap: 32px;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 48px;
   margin: 32px 0;
   justify-content: space-between;
 
@@ -125,6 +125,10 @@
 
 .project__name {
   font-size: 32px;
+  margin-top: 8px;
+
+  @include media-query($on-laptop) {
+  }
 }
 
 .project__description {
@@ -134,6 +138,8 @@
 }
 
 .project__info {
+  margin-top: auto;
+  margin-bottom: auto;
   display: flex;
   flex-direction: column;
 
@@ -152,6 +158,11 @@
 
 .project__image {
   object-fit: contain;
+  height: 340px;
+
+  @include media-query($on-laptop) {
+    height: 280px;
+  }
 }
 
 /* Footer */
