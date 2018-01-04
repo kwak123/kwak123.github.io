@@ -31,6 +31,7 @@
   flex-flow: row;
   align-items: center;
   padding: 32px 0;
+  color: $primary;
 
   @include media-query($on-laptop) {
     flex-flow: column;
@@ -109,7 +110,7 @@
 .project__container {
   width: calc(100% - 64px);
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: 360px 1fr;
   grid-column-gap: 32px;
   margin: 32px 0;
   justify-content: space-between;
@@ -118,9 +119,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  @include media-query($on-palm) {
     max-width: 280px;
   }
 }
@@ -150,6 +148,10 @@
   @include media-query($on-laptop) {
     text-align: center;
   }
+}
+
+.project__image {
+  object-fit: contain;
 }
 
 /* Footer */
