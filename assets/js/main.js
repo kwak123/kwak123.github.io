@@ -47,5 +47,6 @@ $(document).ready(() => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  particlesJS.load('particles-js', 'assets/js/particles.json');
+  particlesJS.load('particles-js', 'assets/js/particles.json', () => console.log('success'));
+  console.log('load test')
 }, false);
