@@ -2,15 +2,18 @@
 layout: default
 ---
 
-{% include profile.html %}
-
-<main class="page-content" aria-label="Content">
-  <div class="wrapper">
-    <div class="home">
-      {% include projects.html %}
+<div>
+  {% include hero.html %}
+  {% include profile.html %}
+  
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <div class="home">
+        {% include projects.html %}
+      </div>
     </div>
-  </div>
-</main>
+  </main>
+</div>
 
 <!-- {% for post in site.posts %}
 <div>

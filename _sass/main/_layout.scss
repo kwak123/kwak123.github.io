@@ -1,5 +1,5 @@
-
 /* Header */
+
 .header {
   position: fixed;
   top: 0;
@@ -30,19 +30,75 @@
   padding: 0 32px;
 }
 
+
+
+/* Hero */
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 63px);
+  background-color: $light-grey;
+}
+
+.hero__container {
+  pointer-events: none;
+  position: absolute;
+  margin-top: -32px;
+  align-self: center;
+  color: white;
+  text-align: center;
+
+  @include media-query($on-mini) {
+    margin-top: -16px;
+  }
+}
+
+.hero__title {
+  font-family: $header-font-family;
+  font-weight: bold;
+  font-size: 108px;
+  font-size: 10vw;
+
+  @include media-query($on-palm) {
+    font-size: 60px;
+    font-size: 10vw;
+  }
+
+  @include media-query($on-mini) {
+    font-size: 48px;
+    font-size: 10vw;
+  }
+}
+
+.hero__subtitle, .hero__descriptor {
+  font-family: $base-font-family;
+  font-size: 48px;
+  font-size: 6vw;
+
+  @include media-query($on-mini) {
+    font-size: 24px;
+    font-size: 6vw;
+  }
+}
+
+
 /* Profile */
+
 .profile {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 63px);
+  // background: linear-gradient($medium-dark-grey, $medium-grey);
   background-color: $light-grey;
   border-bottom: solid 1px $medium-grey;
 }
 
 .profile__container {
-  pointer-events: none;
   z-index: 1;
   display: flex;
   flex-flow: row;
@@ -96,7 +152,7 @@
 
 .profile__image {
   border-radius: 132px;
-  box-shadow: 0 3px 8px 2px $medium-grey;
+  // box-shadow: 0 3px 8px 2px $medium-grey;
 }
 
 /* Body */
@@ -110,6 +166,7 @@
   color: darkslategray;
   padding-bottom: 4px;
   font-size: 30px;
+  text-align: center;
 
   @include media-query($on-laptop) {
     font-size: 24px;

@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+$header-font-family: 'Montserrat', sans-serif;
 $base-font-family: 'Work Sans', sans-serif;
 $base-horizontal-margin: 32px;
 
@@ -10,7 +11,10 @@ $secondary: #e6eebd;
 $light-grey: #f5f5f5;
 $light-medium-grey: #c1c1c1;
 $medium-grey: #8e8e8e;
+$medium-dark-grey: #605f5f;
+$dark-grey: #3e3e3e;
 
+$on-mini:          400px !default;
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
 

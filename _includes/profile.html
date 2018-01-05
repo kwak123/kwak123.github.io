@@ -1,12 +1,11 @@
 <div class="profile">
-  <div id="particles-js"></div>
   <div class="profile__container">
     {% assign profile = site.data.profile %}
     <img class="profile__image" src="{{ profile.pic }}">
 
     <div class="profile__info">
       <p class="profile__info--username">
-        {{ profile.name }}
+        {{ profile.title }}
       </p>
       <p class="profile__info--role">
         {{ profile.role }}
@@ -17,4 +16,3 @@
     </div>
   </div>
 </div>
-<!-- <div id="particles-fade"></div> -->

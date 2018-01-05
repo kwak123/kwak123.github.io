@@ -1,7 +1,9 @@
 let $animImages;
 let $window;
+let $heroDescriptor
+let descriptors = ['Redis', 'Climbing', 'Javascript', 'Node', 'React', 'Express', 'TDD'];
 
-function checkIfVisible() {
+const checkIfVisible = function() {
   let windowHeight = $window.height();
   let windowTop = $window.scrollTop();
   let windowBottom = windowTop + windowHeight;
@@ -22,6 +24,18 @@ function checkIfVisible() {
   });
 };
 
+const shuffleDescriptor = (words) => {
+  if (!words.length) { words = descriptors.slice(); }
+  if (!$heroDescriptor.text()) {
+    $heroDescriptor.text(words.pop());
+    return setTimeout(() => shuffleDescriptor(words), 3000)
+  }
+  $heroDescriptor.fadeOut(() => {
+    $heroDescriptor.text(words.pop());
+    $heroDescriptor.fadeIn(() => setTimeout(() => shuffleDescriptor(words), 3000));
+  })
+};
+
 $(document).ready(() => {
   $animImages = $('.project__image');
   $window = $(window);
@@ -29,17 +43,24 @@ $(document).ready(() => {
   /* Window handlers */
   $window.on('scroll resize', checkIfVisible);
   $window.trigger('scroll');
+
+  $heroDescriptor = $('.hero__descriptor');
+  if ($heroDescriptor.length) {
+    shuffleDescriptor(descriptors.slice()); 
+  }
   
   let $body = $(document).find('body');
-  let $fade = $body.find('.fade__content');
-  $fade.hide();
-  $fade.removeClass('hide');
-  setTimeout(() => $fade.fadeIn(300), 100);
+  let $hiding = $body.find('.hide');
+  $hiding.hide();
+  $hiding.removeClass('hide');
+  setTimeout(() => $hiding.fadeIn(800), 100);
+
+  
   
   $('.page-link, .site-title').on('click', function(e) {
     e.preventDefault();
     let newLoc = this.href;
-    $fade.fadeOut(400, () => window.location = newLoc);
+    $hiding.fadeOut(400, () => window.location = newLoc);
   });
 });
 
@@ -54,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       },
       "color": {
-        "value": "#1f4452"
+        "value": "#e6eebd"
       },
       "shape": {
         "type": "star"
@@ -82,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
       "line_linked": {
         "enable": true,
         "distance": 150,
-        "color": "#1f4452",
+        "color": "#e6eebd",
         "opacity": 0.4,
         "width": 1
       },
