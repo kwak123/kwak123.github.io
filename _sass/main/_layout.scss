@@ -10,6 +10,18 @@
   background: white;
 }
 
+.site-title {
+  -webkit-transition: color 300ms, font-size 150ms;
+     -moz-transition: color 300ms, font-size 150ms;
+       -o-transition: color 300ms, font-size 150ms;
+          transition: color 300ms, font-size 150ms;
+
+  &:hover {
+    color: slategray;
+    font-size: 27px;
+  }
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -20,14 +32,18 @@
 
 /* Profile */
 .profile {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 64px);
+  min-height: calc(100vh - 63px);
   background-color: $light-grey;
+  border-bottom: solid 1px $medium-grey;
 }
 
 .profile__container {
+  pointer-events: none;
+  z-index: 1;
   display: flex;
   flex-flow: row;
   align-items: center;
@@ -57,7 +73,7 @@
 }
 
 .profile__info--username {
-  font-size: 36px;
+  font-size: 48px;
 }
 
 .profile__info--role {
@@ -93,11 +109,21 @@
 .projects__header {
   color: darkslategray;
   padding-bottom: 4px;
+  font-size: 30px;
+
+  @include media-query($on-laptop) {
+    font-size: 24px;
+  }
 }
 
 .projects__header--bg {
+  margin: 32px 0;
   border-bottom: solid 1px $light-medium-grey;
   padding: 0 24px;
+
+  @include media-query($on-laptop) {
+    margin: 16px 0;
+  }
 }
 
 .projects__list {
@@ -115,6 +141,7 @@
   grid-column-gap: 48px;
   margin: 32px 0;
   justify-content: space-between;
+  border-bottom: solid 1px $light-medium-grey;
 
   @include media-query($on-laptop) {
     display: flex;
