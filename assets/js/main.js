@@ -41,11 +41,9 @@ $(document).ready(() => {
     let newLoc = this.href;
     $fade.fadeOut(400, () => window.location = newLoc);
   });
-  console.log('asdf');
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  console.log(document.body.clientWidth > 600)
   particlesJS('particles-js', {
     "particles": {
       "number": {
@@ -125,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
           "particles_nb": 4
         },
         "bubble": {
-          "distance": 200,
+          "distance": 150,
           "size": 6
         }
       }
