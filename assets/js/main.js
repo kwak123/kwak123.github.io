@@ -41,9 +41,11 @@ $(document).ready(() => {
     let newLoc = this.href;
     $fade.fadeOut(400, () => window.location = newLoc);
   });
+  console.log('asdf');
 });
 
 document.addEventListener('DOMContentLoaded', function () {
+  console.log(document.body.clientWidth > 600)
   particlesJS('particles-js', {
     "particles": {
       "number": {
@@ -106,21 +108,25 @@ document.addEventListener('DOMContentLoaded', function () {
       "events": {
         "onhover": {
           "enable": true,
-          "mode": "repulse"
+          "mode": document.body.clientWidth > 600 ? "bubble" : "repulse"
         },
         "onclick": {
           "enable": true,
-          "mode": "push"
+          "mode": document.body.clientWidth > 600 ? "repulse" : "push"
         },
         "resize": true
       },
       "modes": {
         "repulse": {
-          "distance": 50,
+          "distance": document.body.clientWidth > 600 ? 100 : 50,
           "duration": 0.4
         },
         "push": {
           "particles_nb": 4
+        },
+        "bubble": {
+          "distance": 200,
+          "size": 6
         }
       }
     },
