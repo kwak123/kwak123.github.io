@@ -5,16 +5,14 @@
   <div class="projects__list">
     {% for project in site.data.projects %}
     <div class="project__container">
-      <img class="project__image" src="{{ project.image }}">
+      <a href="{{ project.repo }}">
+        <img class="project__image" src="{{ project.image }}">
+      </a>
       <div class="project__info">
-        {% if project.site %}
-          <a class="project__name" href="{{ project.site }}">{{ project.name }}</a>
-        {% else %} 
-          <h4 class="project__name">{{ project.name }}</h4>
-        {% endif %}
+        <h4 class="project__name">{{ project.name }}</h4>
         <p class="project__description">{{ project.description }}</p>
         <p class="project__tech">Tech used: {{ project.tech }}</p>
-        <a class="project__repo" href="{{ project.repo }}">{{ project.repo | slice: 8, 100 }}</a>
+        <a class="project__repo" href="{{ project.repo }}">View source</a>        
       </div>
     </div>
     {% endfor %}
