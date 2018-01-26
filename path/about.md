@@ -1,18 +1,15 @@
 <!-- ---
-layout: page
-title: About Me
+layout: post
+title: About
+header: About Me
+hero: /assets/about/family.jpg
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+<p style="margin-top: -40px; align-self: center; font-size: 12px; color: lightgrey">(I'm on the groom's left)</p>
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+<div id="language-chart" class="project__image billboard"></div>
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+<div id="stacks-chart" class="billboard"></div>
 
-
-[jekyll-organization]: https://github.com/jekyll -->
+I love all aspects of a product, but my personal favorite is architecting an application. My favorite pattern is TDD-backed microservices. Ask me to build something, and I'll do what it takes to return you a product that balances best practices for technical efficiency and developer productivity. -->
