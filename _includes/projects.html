@@ -7,9 +7,14 @@
     <div class="project__container">
       <img class="project__image" src="{{ project.image }}">
       <div class="project__info">
-        <h4 class="project__name">{{ project.name }}</h4>
+        {% if project.site %}
+          <a class="project__name" href="{{ project.site }}">{{ project.name }}</a>
+        {% else %} 
+          <h4 class="project__name">{{ project.name }}</h4>
+        {% endif %}
         <p class="project__description">{{ project.description }}</p>
         <p class="project__tech">Tech used: {{ project.tech }}</p>
+        <a class="project__repo" href="{{ project.repo }}">{{ project.repo | slice: 8, 100 }}</a>
       </div>
     </div>
     {% endfor %}

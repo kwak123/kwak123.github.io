@@ -1,12 +1,17 @@
-- name: Loco
+- name: Loco Mobile
   description: Crowd-sourcing subway status
   image: assets/images/loco/main.png
   tech: React Native, Express, Mongo, Redis, DigitalOcean
+  repo: https://github.com/kwak123/loco-mobile
+  site: 
 - name: Loco-API
   description: Open-sourced and GTFS-compliant API for transit feeds
   image: assets/images/loco/loco-api.png
   tech: Express, MySql, AWS (EC2/RDS)
+  repo: https://github.com/kwak123/loco-api
 - name: Brevity
   description: Code challenges with an emphasis on developer speed and accuracy
   image: assets/images/brevity/brevity.png
   tech: Mongo, Express, React
+  repo: https://github.com/kwak123/brevity
+  site: 

@@ -254,7 +254,7 @@
   }
 }
 
-.project__tech {
+.project__tech, .project__repo {
   margin-top: 8px;
 
   @include media-query($on-laptop) {
