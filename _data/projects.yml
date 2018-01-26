@@ -2,7 +2,7 @@
   description: Crowd-sourcing subway status
   image: assets/images/loco/main.png
   tech: React Native, Express, Mongo, Redis, DigitalOcean
-  repo: https://github.com/teamloco/loco-mobile
+  repo: https://github.com/teamloco/loco-mobile/tree/master/mobile
   site: 
 - name: Loco-API
   description: Open-sourced and GTFS-compliant API for transit feeds
