@@ -1,9 +1,0 @@
-<div class="social__list">
-  {% for icon in include.social %}
-  <a href="{{ icon.url }}">
-    <span class="social__icon">
-      {% include {{ icon.class | prepend: 'icons/icon-' | append: '.svg' }} %}
-    </span>
-  </a>
-  {% endfor %}
-</div>
