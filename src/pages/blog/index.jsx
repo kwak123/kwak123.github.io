@@ -11,12 +11,17 @@ const BlogEntryContainer = styled.div`
 const BlogEntryTitle = styled.h2`
 `;
 
+const BlogEntryExcerpt = styled.div`
+`;
+
 const BlogLandingPage = ({ data }) => (
   <Container>
-    Blog Landing Page
     {data.allMarkdownRemark.edges.map(({ node }) => (
       <BlogEntryContainer key={node.id}>
-        <BlogEntryTitle>{node.frontmatter.title}</BlogEntryTitle>
+        <a href={node.frontmatter.path}>
+          <BlogEntryTitle>{node.frontmatter.title}</BlogEntryTitle>
+        </a>
+        <BlogEntryExcerpt>{node.excerpt}</BlogEntryExcerpt>
       </BlogEntryContainer>
     ))}
   </Container>
@@ -53,8 +58,10 @@ export const query = graphql`
       edges {
         node {
           id
+          excerpt
           frontmatter {
             title
+            path
           }
         }
       }
