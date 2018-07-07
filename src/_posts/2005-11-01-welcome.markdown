@@ -1,0 +1,27 @@
+---
+author: Aaron Hillegass
+date: 2005-11-01 13:49:47
+layout: post
+title: Welcome
+wordpress_id: 7
+path: /blog/welcome
+categories:
+  - Ranch News
+---
+
+
+We have created the Big Nerd Ranch Weblog so that we can share some knowledge with everyone. We sincerely hope that the information presented here is useful. We will be talking about the stuff we consult and teach classes on:
+
+* Cocoa
+
+* PHP
+
+* PostgreSQL
+
+* System Administration
+
+You’ll notice that there is nowhere to leave comments. By eliminating the comments, we can spend our time creating better posts instead of babysitting the comments. If you want to send us comments, we all have email addresses that end in bignerdranch.com. The first part is aaron, chris, nate, or markf, depending on the author. We would love to hear from you.
+
+This weblog is also a chance for us to market our classes, books, and consulting. So come to class, buy some books, rent a nerd. Thanks.
+
+&nbsp;

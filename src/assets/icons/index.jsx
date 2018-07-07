@@ -8,14 +8,20 @@ const icons = [
   {
     component: <EmailIcon />,
     href: 'mailto:kwak123@gmail.com',
+    text: 'kwak123@gmail',
+    fill: '#c71610',
   },
   {
     component: <GitHubIcon />,
     href: 'https://github.com/kwak123',
+    text: 'github/kwak123',
+    fill: 'black',
   },
   {
     component: <LinkedInIcon />,
     href: 'https://linkedin.com/in/kwak123',
+    text: 'linkedin/kwak123',
+    fill: '#0077b5',
   },
 ];
 

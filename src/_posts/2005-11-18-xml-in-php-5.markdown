@@ -1,0 +1,238 @@
+---
+author: Mark Fenoglio
+date: 2005-11-18 03:02:15+00:00
+excerpt: <p>Now that PHP 5 is becoming more and more prevalent over its predecessors,
+  some really good books that cover PHP need revisions. Nowhere is this more true
+  than with XML-related topics, where PHP 5 has a completely different way of working
+  with XML -- and, in fact, the mechanisms from PHP 4 will no longer work. In this
+  article, we'll be looking at one way to build and parse an XML tree using the new
+  methods in PHP 5.</p>
+path: /blog/xml-in-php
+layout: post
+title: XML in PHP 5
+wordpress_id: 8
+---
+
+Now that PHP 5 is becoming more and more prevalent over its predecessors, some really good books that cover PHP need revisions. Nowhere is this more true than with XML-related topics, where PHP 5 has a completely different way of working with XML -- and, in fact, the mechanisms from PHP 4 will no longer work.
+
+
+
+
+
+In this article, we'll be looking at one way to build and parse an XML tree using the new methods in PHP 5.
+
+
+
+
+<!-- more -->
+
+
+
+#### XML Review
+
+
+
+
+
+
+As a (very) quick reminder about what XML is, you work with tags much like you do in HTML, but with two very important distinctions:
+
+
+
+
+
+
+  1. (restriction) You must close every tag
+
+
+  2. (benefit) You get to define the name of these tags in your XML document
+
+
+
+
+
+In other words, what you are doing is creating a "tree" of XML entities where you are defining the data structure for the objects you want to manage (or allow others to manage).
+
+
+
+
+
+By way of example, you might have the following XML file represent the teams in Major League Baseball.
+
+
+
+
+
+
+    <?xml version="1.0" encoding="iso-8859-1"?>
+    <teams>
+    	<team>
+    		<name>Atlanta Braves</name>
+    		<stadium>Turner Field</stadium>
+    		<league>National</league>
+    	</team>
+    	<team>
+    		<name>Chicago Cubs</name>
+    		<stadium>Wrigley Field</stadium>
+    		<league>National</league>
+    	</team>
+
+    	...
+
+    	<team>
+    		<name>Baltimore Orioles</name>
+    		<stadium>Camden Yards</stadium>
+    		<league>American</league>
+    	</team>
+
+    	...
+
+    </teams>
+
+
+
+
+
+
+#### Creating XML in DOM
+
+
+
+
+
+The general workflow for creating an XML document using DOM is (where Steps 2 and 3 are repeated to complete the XML):
+
+
+
+
+
+
+  1. Create a new DOM document
+
+
+  2. Create elements
+
+
+  3. Append children
+
+
+
+
+
+In our example (considering only the first two teams), the code would be:
+
+
+
+
+
+
+    <?php
+
+    // xml_teams_dom.php
+
+    // create the new XML document
+    $dom = new DOMDocument('1.0', 'iso-8859-1');
+
+    // create the root element
+    $list_of_teams = $dom->createElement('teams');
+    $dom->appendChild($list_of_teams);
+
+    // create the first team element
+    $team = $dom->createElement('team');
+    $list_of_teams->appendChild($team);
+
+    // now create all the subelements for the team
+    $name = $team->appendChild($dom->createElement('name'));
+    $name->appendChild($dom->createTextNode('Atlanta Braves'));
+
+    $stadium = $team->appendChild($dom->createElement('stadium'));
+    $stadium->appendChild($dom->createTextNode('Turner Field'));
+
+    $league = $team->appendChild($dom->createElement('league'));
+    $league->appendChild($dom->createTextNode('National'));
+
+    // create the second team element
+    $team = $dom->createElement('team');
+    $list_of_teams->appendChild($team);
+
+    // now create all the subelements for the second team
+    $name = $team->appendChild($dom->createElement('name'));
+    $name->appendChild($dom->createTextNode('Chicago Cubs'));
+
+    $stadium = $team->appendChild($dom->createElement('stadium'));
+    $stadium->appendChild($dom->createTextNode('Wrigley Field'));
+
+    $league = $team->appendChild($dom->createElement('league'));
+    $league->appendChild($dom->createTextNode('National'));
+
+    $xml_result = $dom->saveXML();
+
+    // simple mechanism to see the XML
+
+    print <<<XML_SHOW
+    <textarea cols='80' rows='40' name='xml_result'>$xml_result</textarea>
+    XML_SHOW;
+
+    ?>
+
+
+
+
+
+
+#### XML Parsing
+
+
+
+
+
+Now that we have an XML structure, how exactly do we interrogate it for information?
+
+
+
+
+
+The general workflow for parsing an XML document for specific elements is:
+
+
+
+
+
+
+  1. Create a new DOM document
+
+
+  2. Load an XML tree into the DOM document
+
+
+  3. Query the new XML tree and loop through the desired elements
+
+
+
+
+
+In our case, we might add the following code to our script:
+
+
+
+
+
+
+    // pull in the work we've just done
+    $team_xml = new DOMDocument();
+    $team_xml->loadXML($xml_result);
+
+    // statement block to get at the elements of the xml document
+    $team_list = $team_xml->getElementsByTagName('team');
+    foreach ($team_list AS $team) {
+    	foreach ($team->childNodes AS $item) {
+    		print $item->nodeName . " = " . $item->nodeValue . "<br />";
+    	}
+    }
+
+
+
+
+
+
+This obviously only scratches the surface of using XML in PHP 5. XML is an extremely important tool in PHP (and everywhere else), particularly in the development of web services.

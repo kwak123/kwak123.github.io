@@ -19,7 +19,7 @@ module.exports = {
         multiline: true,
         minProperties: 1,
       },
-    }]
+    }],
   },
   globals: {
     graphql: true,

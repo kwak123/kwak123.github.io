@@ -3,9 +3,11 @@ author: Aaron Hillegass
 date: 2005-11-03 01:59:14+00:00
 layout: post
 title: Debugging retain counts
+path: /blog/debugging-retain-counts
 wordpress_id: 2
 categories:
 - Mac
+- Leveling Up
 ---
 
 This article, originally published in _MacTech Magazine_, gives tips on how to write your code such that retain count problems are easier to find and how to locate the problem when symptoms appear.
