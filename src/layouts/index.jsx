@@ -14,6 +14,9 @@ const Container = styled.div`
   height: 100vh;
   width: 100vw;
   font-family: ${baseFont};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const Content = styled.div`
