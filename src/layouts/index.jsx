@@ -6,7 +6,9 @@ import styled from 'styled-components';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import './normalize.css';
-import favicon from '../assets/favicon/favicon.ico';
+
+import favicon16 from '../assets/favicon/favicon-16x16.png';
+import favicon32 from '../assets/favicon/favicon-32x32.png';
 
 import { baseFont } from '../utils/css';
 
@@ -26,14 +28,27 @@ const Content = styled.div`
   padding-top: 0;
 `;
 
+const faviconLinks = [
+  {
+    rel: 'icon',
+    type: 'image/png',
+    sizes: '16x16',
+    href: favicon16,
+  },
+  {
+    rel: 'icon',
+    type: 'image/png',
+    sizes: '32x32',
+    href: favicon32,
+  },
+];
 
 const Layout = ({ children, data }) => (
   <Container>
     <Helmet
       title={data.site.siteMetadata.title}
-      link={data.site.siteMetadata.link}
+      link={[...(data.site.siteMetadata.link || []), ...faviconLinks]}
       meta={data.site.siteMetadata.meta}
-      favicon={favicon}
     />
     <Header siteTitle={data.site.siteMetadata.title} />
     <Content>
