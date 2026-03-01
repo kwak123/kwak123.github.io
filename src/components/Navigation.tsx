@@ -52,6 +52,7 @@ export default function Navigation() {
       
       {/* Desktop Links */}
       <div className="nav-links desktop-only">
+        <Link href="/">Home</Link>
         <Link href="/about">About me</Link>
         <Link href="/projects">Projects</Link>
         <Link href="/blog">Blog</Link>
@@ -70,6 +71,7 @@ export default function Navigation() {
 
       {/* Mobile Links */}
       <div className={`mobile-menu ${isOpen ? 'open' : ''}`}>
+        <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
         <Link href="/about" onClick={() => setIsOpen(false)}>About me</Link>
         <Link href="/projects" onClick={() => setIsOpen(false)}>Projects</Link>
         <Link href="/blog" onClick={() => setIsOpen(false)}>Blog</Link>

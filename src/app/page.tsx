@@ -1,11 +1,15 @@
 import React from 'react';
 import { personalData, projects, experience } from '../data/content';
 import Navigation from '../components/Navigation';
+import UnderConstructionBanner from '../components/UnderConstructionBanner';
 
 export default function Home() {
   return (
     <div className="container">
       <Navigation />
+
+      {/* Under Construction Banner */}
+      <UnderConstructionBanner />
 
       <main>
         {/* Hero Section */}

@@ -415,33 +415,58 @@ a {
   margin-top: 80px;
 }
 
+.under-construction-banner {
+  width: 100%;
+  min-height: 192px;
+  padding: 24px;
+  gap: 32px;
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
   .hero-title { font-size: 3.25rem; }
-  .bento-grid { grid-template-columns: repeat(3, 1fr); }
+  .bento-grid { grid-template-columns: 1fr; grid-auto-rows: auto; gap: 24px; }
   .bento-card {
-    &.hero-card { grid-column: span 3; }
-    &.large { grid-column: span 2; grid-row: span 2; }
-    &.wide { grid-column: span 2; }
+    &.hero-card, &.large, &.wide { grid-column: span 1; grid-row: span 1; }
   }
 }
 
 @media (max-width: 768px) {
-  .bento-grid { grid-template-columns: repeat(2, 1fr); }
-  .bento-card {
-    &.hero-card { grid-column: span 2; }
-  }
   .hero { flex-direction: column; text-align: center; gap: 40px; }
   .hero-subtitle { margin: 0 auto 32px auto; }
 }
 
 @media (max-width: 600px) {
-  .bento-grid { grid-template-columns: 1fr; grid-auto-rows: auto; gap: 16px; }
-  .bento-card {
-    &.hero-card, &.large, &.wide { grid-column: span 1; grid-row: span 1; }
-  }
   .hero-title { font-size: 2.5rem; }
   .nav { margin-bottom: 24px; padding: 16px 0; margin-top: -16px; }
   .nav .desktop-only { display: none; }
   .nav .hamburger { display: flex; }
+  
+  .under-construction-banner {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 24px;
+    gap: 16px;
+
+    h2 {
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
 }
+
