@@ -1,19 +1,11 @@
 import React from 'react';
 import { personalData, projects, experience } from '../data/content';
+import Navigation from '../components/Navigation';
 
 export default function Home() {
   return (
     <div className="container">
-      <nav className="nav">
-        <div style={{ fontWeight: 800, fontSize: '1.4rem', letterSpacing: '-0.5px' }}>
-          {personalData.name.split(' ')[0]}
-        </div>
-        <div className="nav-links">
-          <a href="#work">Work</a>
-          <a href="#projects">Projects</a>
-          <a href="#blog">Blog</a>
-        </div>
-      </nav>
+      <Navigation />
 
       <main>
         {/* Hero Section */}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { projects } from '../../../data/content';
+import Navigation from '../../../components/Navigation';
 
 interface ProjectPageProps {
   params: Promise<{
@@ -18,13 +19,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <div className="container">
-      <nav className="nav">
-        <a href="/" style={{ fontWeight: 800, fontSize: '1.4rem', letterSpacing: '-0.5px' }}>
-          ← Back
-        </a>
-      </nav>
+      <Navigation />
 
-      <main style={{ marginTop: '60px' }}>
+      <main style={{ marginTop: '0px' }}>
+        <a href="/projects" style={{display: 'inline-block', marginBottom: '24px', color: 'var(--text-secondary)'}}>← Back to Projects</a>
         <h1 className="hero-title" style={{ fontSize: '3rem', marginBottom: '16px' }}>{project.title}</h1>
         
         <div className="tech-stack" style={{ marginBottom: '40px' }}>
