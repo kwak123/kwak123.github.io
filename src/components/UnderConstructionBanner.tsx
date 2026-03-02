@@ -15,7 +15,7 @@ export default function UnderConstructionBanner() {
       backdropFilter: 'var(--glass-blur)'
     }}>
       <div className="banner-img-container" style={{ flexShrink: 0 }}>
-        <Image src="/under-construction.png" alt="Under Construction" width={140} height={140} style={{ borderRadius: '12px', width: '100%', height: 'auto' }} />
+        <Image src="/under-construction.png" alt="Under Construction" width={140} height={140} style={{ borderRadius: '12px', width: '100%' }} />
       </div>
       <h2 style={{ color: 'var(--accent-color)', margin: 0, fontWeight: 800 }}>This site is currently Under Construction!</h2>
     </div>
