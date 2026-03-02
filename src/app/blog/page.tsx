@@ -10,7 +10,7 @@ export default function BlogPage() {
       
       <main>
         <h1 className="section-title">Blog</h1>
-        <p style={{ color: 'var(--text-secondary)' }}>
+        <p className="text-secondary">
           Blog posts coming soon.
         </p>
       </main>

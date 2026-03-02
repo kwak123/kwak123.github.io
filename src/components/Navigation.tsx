@@ -46,7 +46,7 @@ export default function Navigation() {
       ref={navRef}
       className={`nav ${isVisible ? 'visible' : 'hidden'}`}
     >
-      <Link href="/" style={{ fontWeight: 800, fontSize: '1.4rem', letterSpacing: '-0.5px' }}>
+      <Link href="/" className="nav-brand">
         Samuel
       </Link>
       

@@ -10,7 +10,7 @@ export default function ProjectsPage() {
       
       <main>
         <h1 className="section-title">Projects</h1>
-        <p style={{ color: 'var(--text-secondary)' }}>
+        <p className="text-secondary">
           Project listings coming soon.
         </p>
       </main>

@@ -10,7 +10,7 @@ export default function AboutPage() {
       
       <main>
         <h1 className="section-title">About Me</h1>
-        <p style={{ color: 'var(--text-secondary)' }}>
+        <p className="text-secondary">
           Detailed about information coming soon.
         </p>
       </main>

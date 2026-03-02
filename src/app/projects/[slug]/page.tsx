@@ -28,46 +28,39 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     <div className="container">
       <Navigation />
 
-      <main style={{ marginTop: '0px' }}>
-        <a href="/projects" style={{display: 'inline-block', marginBottom: '24px', color: 'var(--text-secondary)'}}>← Back to Projects</a>
-        <h1 className="hero-title" style={{ fontSize: '3rem', marginBottom: '16px' }}>{project.title}</h1>
+      <main className="mt-0">
+        <a href="/projects" className="project-back-link">← Back to Projects</a>
+        <h1 className="hero-title project-title">{project.title}</h1>
         
-        <div className="tech-stack" style={{ marginBottom: '40px' }}>
+        <div className="tech-stack project-tech-stack">
           {project.techStack.map((tech, idx) => (
-            <span key={idx} className="tech-tag" style={{ border: '1px solid var(--accent-color)', color: 'var(--accent-color)' }}>
+            <span key={idx} className="tech-tag">
               {tech}
             </span>
           ))}
         </div>
 
         {project.slug === 'azure-copilot' && (
-          <div style={{
-            width: '100%', height: '300px', 
-            background: 'var(--card-bg)', 
-            borderRadius: '24px', 
-            border: '1px solid var(--card-border)',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            marginBottom: '40px', color: 'var(--text-secondary)'
-          }}>
+          <div className="project-visual-placeholder">
             [ Azure Copilot Visual Placeholder ]
           </div>
         )}
 
-        <div style={{ fontSize: '1.2rem', lineHeight: '1.8', color: 'var(--text-primary)', maxWidth: '800px' }}>
+        <div className="project-content">
           <p>{project.description}</p>
           
           {/* Mock extended content for the detailed page */}
-          <h2 style={{ fontSize: '2rem', marginTop: '60px', marginBottom: '24px', fontWeight: 600 }}>The Problem</h2>
-          <p style={{ color: 'var(--text-secondary)' }}>
+          <h2>The Problem</h2>
+          <p className="text-secondary">
             This section will contain a deep dive into the engineering challenges faced during the development of {project.title}.
           </p>
 
-          <h2 style={{ fontSize: '2rem', marginTop: '60px', marginBottom: '24px', fontWeight: 600 }}>Architecture & Solution</h2>
-          <p style={{ color: 'var(--text-secondary)' }}>
+          <h2>Architecture & Solution</h2>
+          <p className="text-secondary">
             Here is where we will detail the system architecture, specifically highlighting the usage of {project.techStack.join(', ')}.
           </p>
 
-          <div style={{ marginTop: '60px', display: 'flex', gap: '16px' }}>
+          <div className="project-actions">
             {project.liveUrl && (
               <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                 <button className="primary-btn">Visit Live App</button>
