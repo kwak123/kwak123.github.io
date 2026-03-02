@@ -7,7 +7,7 @@ export default function UnderConstructionBanner() {
       <div className="banner-img-container">
         <Image src="/under-construction.png" alt="Under Construction" width={140} height={140} />
       </div>
-      <h2>This site is currently Under Construction!</h2>
+      <h2>This site is currently under construction!</h2>
     </div>
   );
 }
